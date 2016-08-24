@@ -1,0 +1,15 @@
+.oc-tab {
+	text-align: center;
+	width: 200px;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.oc-tab-icon {
+	width: 25px;
+}
+
+.oc-tab-text {
+	margin-left: 10px;
+}

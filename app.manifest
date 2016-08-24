@@ -1,0 +1,12 @@
+{
+    "id"          : "sdk.user.tabcontrol",
+    "name"        : "tabcontrol",
+    "css"         : [ "appStylesheet.css" ],
+    "template"    : "appLayout.html",
+    "view"        : "appView.js",
+    "controller"  : "appController.js",
+    "permissions" : [ ],
+    "categoryId"  : "WORKSPACE",
+    "date"        : "2016-08-23",
+    "version"     : "1.0.0"
+}
