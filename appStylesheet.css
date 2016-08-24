@@ -1,3 +1,65 @@
+.oc-tab-control {
+	display: flex;
+	align-items: center;
+}
+
+.oc-tab-button,
+.oc-tab {
+	cursor: pointer;
+}
+
+.oc-tab-button {
+	height: 90px;
+	width: 50px;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+}
+
+.oc-tab-button::before {
+	content: '';
+	display: block;
+	height: 25px;
+	width: 25px;
+	transform: rotate(45deg);
+}
+
+.oc-tab-button.previous::before,
+.oc-tab-button.next::before {
+	box-sizing: border-box;
+}
+
+
+.oc-tab-button.previous {
+	border-right-width: 0;
+}
+
+.oc-tab-button.previous::before {
+	border-left: solid 5px #fff;
+	border-bottom: solid 5px #fff;
+	margin-left: 12.5px;
+}
+
+.oc-tab-button.next {
+	border-left-width: 0;
+}
+
+.oc-tab-button.next::before {
+	border-right: solid 5px #fff;
+	border-top: solid 5px #fff;
+	margin-right: 12.5px;
+}
+
+.oc-tab-list {
+	padding: 0;
+}
+
+.oc-tab-list > :last-child {
+	margin-right: 0;
+}
+
 .oc-tab {
 	text-align: center;
 	width: 200px;
