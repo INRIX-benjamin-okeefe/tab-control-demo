@@ -64,8 +64,8 @@ define(function (require) {
                                 {
                                     text: 'Tab 1',
                                     icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/website.svg',
-                                    enabled: true,
-                                    selected: false
+                                    enabled: undefined,
+                                    selected: undefined
                                 },
                                 {
                                     //text: 'Tab 2',
@@ -74,9 +74,9 @@ define(function (require) {
                                     selected: true
                                 },
                                 {
-                                    text: 'Tab 3 has some really long text',
+                                    text: 'Tab 3',
                                     //icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
-                                    enabled: true,
+                                    enabled: false,
                                     selected: false
                                 }
                             ]

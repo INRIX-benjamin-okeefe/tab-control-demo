@@ -68,6 +68,10 @@
     overflow: hidden;
 }
 
+.oc-tab[disabled="disabled"] {
+	opacity: 0.4;
+}
+
 .oc-tab.oc-tab-selected {
 	background-color: rgb(41, 142, 255);
 }
