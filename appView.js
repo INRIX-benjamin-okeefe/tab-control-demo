@@ -56,40 +56,38 @@ define(function (require) {
          */
         started () {
             return super.started().then(() => {
-                const tabControl = new TabControl({
-                    model: {
-                        tabs: [
-                            {
-                                text: 'Tab 1',
-                                icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/website.svg',
-                                enabled: true,
-                                selected: false
-                            },
-                            {
-                                icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/palette-samples.svg',
-                                enabled: true,
-                                selected: true
-                            },
-                            {
-                                text: 'Tab 3 has some really long text',
-                                icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
-                                enabled: true,
-                                selected: false
-                            }
-                        ]
-                    },
-                    click: function (selectedTab) {
-                        console.log(selectedTab);
-                    } 
-                });
+                const
+                    selectedModelView = new TextView(),
+                    tabControl = new TabControl({
+                        model: {
+                            tabs: [
+                                {
+                                    text: 'Tab 1',
+                                    icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/website.svg',
+                                    enabled: true,
+                                    selected: false
+                                },
+                                {
+                                    //text: 'Tab 2',
+                                    icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/palette-samples.svg',
+                                    enabled: true,
+                                    selected: true
+                                },
+                                {
+                                    text: 'Tab 3 has some really long text',
+                                    //icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
+                                    enabled: true,
+                                    selected: false
+                                }
+                            ]
+                        },
+                        click: function (selectedTabModel) {
+                            selectedModelView.setText(JSON.stringify(selectedTabModel));
+                        } 
+                    });
 
                 tabControl.render(this.getView());
-
-                const text = new TextView({
-                    
-                });
-                text.setText(window.modulePath);
-                text.render(this.getView());
+                selectedModelView.render(this.getView());
             });
         }
 

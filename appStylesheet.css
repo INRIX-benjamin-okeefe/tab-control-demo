@@ -68,10 +68,19 @@
     overflow: hidden;
 }
 
+.oc-tab.oc-tab-selected {
+	background-color: rgb(41, 142, 255);
+}
+
 .oc-tab-icon {
 	width: 25px;
 }
 
 .oc-tab-text {
 	margin-left: 10px;
+}
+
+/* Non Tab Control specific styles */
+.default [data-oc-control="TextView"] {
+	word-break: break-all;
 }
