@@ -73,7 +73,8 @@
 }
 
 .oc-tab.oc-tab-selected {
-	background-color: rgb(41, 142, 255);
+	background-color: rgb(38,147,255);
+	box-shadow: 0px 0px 20px rgba(38,201,255,0.8);
 }
 
 .oc-tab-icon {
@@ -87,4 +88,5 @@
 /* Non Tab Control specific styles */
 .default [data-oc-control="TextView"] {
 	word-break: break-all;
+	font-size: 18pt;
 }

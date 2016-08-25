@@ -4,7 +4,8 @@ define(function (require) {
     const
         ModuleView = require('common/platform/ModuleView'),
         TabControl = require('common/ui/TabControl'),
-        TextView = require('common/ui/TextView');
+        TextView = require('common/ui/TextView'),
+        Button = require('common/ui/Button');
 
     /**
      * This is the application's root view, which is used for any UI control creation and handling.
@@ -73,19 +74,33 @@ define(function (require) {
                                     enabled: true,
                                     selected: true
                                 },
-                                {
-                                    text: 'Tab 3',
-                                    //icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
-                                    enabled: false,
-                                    selected: false
-                                }
+                                // {
+                                //     text: 'Tab 3',
+                                //     //icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
+                                //     enabled: false,
+                                //     selected: false
+                                // }
                             ]
                         },
                         click: function (selectedTabModel) {
                             selectedModelView.setText(JSON.stringify(selectedTabModel));
                         } 
+                    }),
+                    addTabButton = new Button({
+                        model: {
+                            text: 'Add Tab'
+                        },
+                        click: function () {
+                            tabControl.addTab({
+                                text: 'Tab 4',
+                                icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/test-tube.svg',
+                                enabled: true,
+                                selected: false
+                            }); 
+                        }
                     });
 
+                addTabButton.render(this.getView());
                 tabControl.render(this.getView());
                 selectedModelView.render(this.getView());
             });
