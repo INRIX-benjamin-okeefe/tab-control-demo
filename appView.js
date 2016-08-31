@@ -114,7 +114,7 @@ define(function (require) {
                             tabControl.addTab({
                                 text: `Tab ${tabControl.getTabs().length + 1}`,
                                 enabled: true,
-                                selected: false
+                                selected: true
                             }, 1);
                         }
                     });
