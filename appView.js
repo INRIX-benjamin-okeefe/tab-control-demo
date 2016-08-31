@@ -91,7 +91,7 @@ define(function (require) {
                         },
                         click: function () {
                             tabControl.addTab({
-                                text: 'Tab 4 has some extra long text',
+                                text: `Tab ${tabControl.getTabs().length + 1} has some extra long text`,
                                 icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
                                 enabled: undefined,
                                 selected: undefined
@@ -103,12 +103,25 @@ define(function (require) {
                             text: 'Remove Tab'
                         },
                         click: function () {
-                            tabControl.removeTab(3);
+                            tabControl.removeTab(tabControl.getTabs().length - 1);
                         } 
+                    }),
+                    insertTabButton = new Button({
+                        model: {
+                            text: 'Insert Tab'
+                        },
+                        click: function () {
+                            tabControl.addTab({
+                                text: `Tab ${tabControl.getTabs().length + 1}`,
+                                enabled: true,
+                                selected: false
+                            }, 1);
+                        }
                     });
 
                 addTabButton.render(this.getView());
                 removeTabButton.render(this.getView());
+                insertTabButton.render(this.getView());
                 tabControl.render(this.getView());
                 selectedModelView.render(this.getView());
             });
