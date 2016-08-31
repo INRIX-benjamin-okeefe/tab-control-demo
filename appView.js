@@ -74,12 +74,11 @@ define(function (require) {
                                     enabled: true,
                                     selected: true
                                 },
-                                // {
-                                //     text: 'Tab 3',
-                                //     //icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
-                                //     enabled: false,
-                                //     selected: false
-                                // }
+                                {
+                                    text: 'Tab 3',
+                                    enabled: false,
+                                    selected: false
+                                }
                             ]
                         },
                         click: function (selectedTabModel) {
@@ -92,15 +91,24 @@ define(function (require) {
                         },
                         click: function () {
                             tabControl.addTab({
-                                text: 'Tab 4',
-                                icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/test-tube.svg',
-                                enabled: true,
-                                selected: false
+                                text: 'Tab 4 has some extra long text',
+                                icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
+                                enabled: undefined,
+                                selected: undefined
                             }); 
                         }
+                    }),
+                    removeTabButton = new Button({
+                        model: {
+                            text: 'Remove Tab'
+                        },
+                        click: function () {
+                            tabControl.removeTab(3);
+                        } 
                     });
 
                 addTabButton.render(this.getView());
+                removeTabButton.render(this.getView());
                 tabControl.render(this.getView());
                 selectedModelView.render(this.getView());
             });

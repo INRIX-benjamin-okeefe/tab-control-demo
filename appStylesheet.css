@@ -54,6 +54,9 @@
 
 .oc-tab-list {
 	padding: 0;
+	white-space: nowrap;
+    width: 800px;
+    overflow: hidden;
 }
 
 .oc-tab-list > :last-child {
@@ -86,6 +89,10 @@
 }
 
 /* Non Tab Control specific styles */
+.oc-screen {
+	text-align: center;
+}
+
 .default [data-oc-control="TextView"] {
 	word-break: break-all;
 	font-size: 18pt;
