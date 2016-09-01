@@ -64,13 +64,13 @@ define(function (require) {
                             tabs: [
                                 {
                                     text: 'Tab 1',
-                                    icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/website.svg',
+                                    icon: `${window.MODULE_PATH}/icons/website.svg`,
                                     enabled: undefined,
                                     selected: undefined
                                 },
                                 {
                                     //text: 'Tab 2',
-                                    icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/palette-samples.svg',
+                                    icon: `${window.MODULE_PATH}/icons/palette-samples.svg`,
                                     enabled: true,
                                     selected: true
                                 },
@@ -92,7 +92,7 @@ define(function (require) {
                         click: function () {
                             tabControl.addTab({
                                 text: `Tab ${tabControl.getTabs().length + 1} has some extra long text`,
-                                icon: 'http://localhost:4242/ui/apps/sdk/workspace/sdk.user.tabcontrol/icons/blood-sample.svg',
+                                icon: `${window.MODULE_PATH}/icons/blood-sample.svg`,
                                 enabled: undefined,
                                 selected: undefined
                             }); 
