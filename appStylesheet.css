@@ -12,15 +12,20 @@
 	position: absolute;
 	height: 90px;
 	width: 50px;
-	background-color: transparent;
+	background-color: rgb(32,34,38);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border: 0;
+	z-index: 999;
 }
 
 .oc-tab-button[disabled="disabled"] {
-	opacity: 0.4;
+	opacity: 1;
+}
+
+.oc-tab-button[disabled="disabled"]::before {
+	opacity: 0.4;	
 }
 
 .oc-tab-button::before {
@@ -80,6 +85,7 @@
 	white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    height: 90px;
 }
 
 .oc-tab[disabled="disabled"] {
