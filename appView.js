@@ -66,17 +66,17 @@ define(function (require) {
                                     text: 'Tab 1',
                                     icon: `${window.MODULE_PATH}/icons/website.svg`,
                                     enabled: undefined,
-                                    selected: undefined
+                                    selected: true
                                 },
                                 {
                                     //text: 'Tab 2',
                                     icon: `${window.MODULE_PATH}/icons/palette-samples.svg`,
                                     enabled: true,
-                                    selected: true
+                                    selected: false
                                 },
                                 {
                                     text: 'Tab 3',
-                                    enabled: false,
+                                    enabled: true,
                                     selected: false
                                 }
                             ]

@@ -9,6 +9,7 @@
 }
 
 .oc-tab-button {
+	position: absolute;
 	height: 90px;
 	width: 50px;
 	background-color: transparent;
@@ -16,6 +17,10 @@
 	align-items: center;
 	justify-content: center;
 	border: 0;
+}
+
+.oc-tab-button[disabled="disabled"] {
+	opacity: 0.4;
 }
 
 .oc-tab-button::before {
@@ -34,6 +39,7 @@
 
 .oc-tab-button.previous {
 	border-right-width: 0;
+	left: 0;
 }
 
 .oc-tab-button.previous::before {
@@ -44,6 +50,7 @@
 
 .oc-tab-button.next {
 	border-left-width: 0;
+	right: 0;
 }
 
 .oc-tab-button.next::before {
