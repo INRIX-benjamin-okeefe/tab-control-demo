@@ -60,10 +60,14 @@
 }
 
 .oc-tab-list {
+	width: 100%;
+	margin: 35px 55px;
 	padding: 0;
 	white-space: nowrap;
-    width: 800px;
+    width: 700px;
     overflow: hidden;
+    text-align: left;
+
 }
 
 .oc-tab-list > :last-child {
