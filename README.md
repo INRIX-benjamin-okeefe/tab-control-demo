@@ -16,6 +16,4 @@ Tabs can also be scrolled using the previous and next buttons at either end of t
 
 * The insert tab button currently inserts all tabs into the 2nd position in the tab bar. This can be updated to be any position in the click handler for the insert tab button in the app view.
 * The remove tab button will always remove the last tab in the tab bar. This can be updated to remove any tab in the click handler for the remove tab button in the app view.
-* The CSS is currently all in this app, but will ultimately need to be moved to the profile.
-* The previous and next button functionality is rudimentary, and may need to be eventually handled in the profile (if possible).
 * Navigation and events are not yet wired up to work with the commander.

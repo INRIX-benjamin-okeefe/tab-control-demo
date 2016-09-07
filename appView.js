@@ -5,7 +5,8 @@ define(function (require) {
         ModuleView = require('common/platform/ModuleView'),
         TabControl = require('common/ui/TabControl'),
         TextView = require('common/ui/TextView'),
-        Button = require('common/ui/Button');
+        Button = require('common/ui/Button'),
+        Pane = require('common/ui/Pane');
 
     /**
      * This is the application's root view, which is used for any UI control creation and handling.
@@ -87,7 +88,8 @@ define(function (require) {
                     }),
                     addTabButton = new Button({
                         model: {
-                            text: 'Add Tab'
+                            text: 'Add Tab',
+                            focused: true
                         },
                         click: function () {
                             tabControl.addTab({
@@ -119,11 +121,14 @@ define(function (require) {
                         }
                     });
 
-                addTabButton.render(this.getView());
-                removeTabButton.render(this.getView());
-                insertTabButton.render(this.getView());
-                tabControl.render(this.getView());
-                selectedModelView.render(this.getView());
+                this.appPane = new Pane({id: 'tab-control-app'})
+
+                this.appPane.addChild(addTabButton);
+                this.appPane.addChild(removeTabButton);
+                this.appPane.addChild(insertTabButton);
+                this.appPane.addChild(tabControl);
+                this.appPane.addChild(selectedModelView);
+                this.appPane.render(this.getView());
             });
         }
 
