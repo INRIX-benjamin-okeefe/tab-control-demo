@@ -12,8 +12,7 @@ Tabs can also be scrolled using the previous and next buttons at either end of t
 2. Switch to the tab-control branch in ividev.
 3. Select 'tab control' from the launch app/workspace menu in the simulator.
 
-## Caveats
+## Tips
 
 * The insert tab button currently inserts all tabs into the 2nd position in the tab bar. This can be updated to be any position in the click handler for the insert tab button in the app view.
 * The remove tab button will always remove the last tab in the tab bar. This can be updated to remove any tab in the click handler for the remove tab button in the app view.
-* Navigation and events are not yet wired up to work with the commander.
