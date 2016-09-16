@@ -66,17 +66,28 @@ define(function (require) {
                                 {
                                     text: 'Tab 1',
                                     icon: `${window.MODULE_PATH}/icons/website.svg`,
-                                    enabled: undefined,
+                                    enabled: true,
                                     selected: true
                                 },
                                 {
-                                    //text: 'Tab 2',
                                     icon: `${window.MODULE_PATH}/icons/palette-samples.svg`,
-                                    enabled: true,
+                                    enabled: false,
                                     selected: false
                                 },
                                 {
                                     text: 'Tab 3',
+                                    icon: 'bell',
+                                    enabled: true,
+                                    selected: false
+                                },
+                                {
+                                    text: 'Tab 4',
+                                    enabled: false,
+                                    selected: false
+                                },
+                                {
+                                    text: 'Tab 5',
+                                    icon: `${window.MODULE_PATH}/icons/test-tube.svg`,
                                     enabled: true,
                                     selected: false
                                 }
@@ -84,7 +95,8 @@ define(function (require) {
                         },
                         click: function (selectedTabModel) {
                             selectedModelView.setText(JSON.stringify(selectedTabModel));
-                        } 
+                        },
+                        delay: 500
                     }),
                     addTabButton = new Button({
                         model: {
@@ -117,18 +129,15 @@ define(function (require) {
                                 text: `Tab ${tabControl.getTabs().length + 1}`,
                                 enabled: true,
                                 selected: true
-                            }, 1);
+                            }, 2);
                         }
                     });
 
-                this.appPane = new Pane({id: 'tab-control-app'})
-
-                this.appPane.addChild(addTabButton);
-                this.appPane.addChild(removeTabButton);
-                this.appPane.addChild(insertTabButton);
-                this.appPane.addChild(tabControl);
-                this.appPane.addChild(selectedModelView);
-                this.appPane.render(this.getView());
+                addTabButton.render(this.getView());
+                removeTabButton.render(this.getView());
+                insertTabButton.render(this.getView());
+                tabControl.render(this.getView());
+                selectedModelView.render(this.getView());
             });
         }
 
