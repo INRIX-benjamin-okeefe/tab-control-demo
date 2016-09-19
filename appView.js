@@ -61,6 +61,7 @@ define(function (require) {
                 const
                     selectedModelView = new TextView(),
                     tabControl = new TabControl({
+                        id: 'TabControlID',
                         model: {
                             tabs: [
                                 {
@@ -129,7 +130,7 @@ define(function (require) {
                                 text: `Tab ${tabControl.getTabs().length + 1}`,
                                 enabled: true,
                                 selected: true
-                            }, 2);
+                            }, 1);
                         }
                     });
 
