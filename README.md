@@ -9,7 +9,7 @@ Tabs can also be scrolled using the previous and next buttons at either end of t
 ## Installation
 
 1. Download the app, unzip it, and move it to your workspace folder.
-2. Switch to the tab-control branch in ividev.
+2. Switch to the **master** or **cadence-release** branch in ividev.
 3. Select 'tab control' from the launch app/workspace menu in the simulator.
 
 ## Tips
